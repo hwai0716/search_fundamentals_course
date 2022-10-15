@@ -1,5 +1,13 @@
 {
   "settings": {
     "index.refresh_interval": "5s"
+  },
+  "mappings": {
+    "properties":  {    
+      "name":                 { "type": "text", "fields": { "keyword": {"type": "keyword", "ignore_above": 256 }}},  
+      "shortDescription":     { "type": "text", "keyword": {"type": "keyword", "ignore_above": 256 }}, 
+      "longDescription":      { "type": "text", "keyword": {"type": "keyword", "ignore_above": 256 }},
+      "regularPrice":         { "type": "float" }
+    }
   }
 }
