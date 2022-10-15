@@ -4,10 +4,12 @@
   },
   "mappings": {
     "properties":  {    
-      "name":                 { "type": "text", "fields": { "keyword": {"type": "keyword", "ignore_above": 256 }}},  
-      "shortDescription":     { "type": "text", "keyword": {"type": "keyword", "ignore_above": 256 }}, 
-      "longDescription":      { "type": "text", "keyword": {"type": "keyword", "ignore_above": 256 }},
-      "regularPrice":         { "type": "float" }
+      "name":                 { "type":"text", "analyzer":"english", "fields": { "keyword": {"type": "keyword", "ignore_above": 256 }}},  
+      "shortDescription":     { "type":"text", "analyzer":"english", "fields": { "keyword": {"type": "keyword", "ignore_above": 256 }}}, 
+      "longDescription":      { "type":"text", "analyzer":"english", "fields": { "keyword": {"type": "keyword", "ignore_above": 256 }}},
+      "regularPrice":         { "type": "float" },
+      "onlineAvailability":   { "type": "boolean" },
+      "inStoreAvailability":  { "type": "boolean" }
     }
   }
 }
